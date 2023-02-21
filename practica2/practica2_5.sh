@@ -1,25 +1,18 @@
-#/bin/bash
-#816787, Villagrasa Labrador, Alain, T, [1], A
-#848884, Herce Cruz, Daniel, T, [1], A
+#!/bin/bash
+#816787, Villagrasa, Alain, T, 1, A
+#848884, Herce, Daniel, T, 1, A
 
-echo -n "Introduce el nombre de un directorio: "
+echo -n "Introduzca el nombre de un directorio: "
 read DIR
 
-if [ -d "$DIR/" ]
+if [ -d "$DIR" ]
 then
-	countD=0
-	countA=0
-	for fich in "$DIR"/*
-	do
-		if [ -d "$fich" ]
-		then
-			((countD++))
-		else
-			((countA++))
-		fi
-	done
-	echo "El numero de ficheros y directorios en $DIR es de $countA y $countD, respectivamente"
+    # También se puede con un bucle comprobando permisos de cada fichero
+    # y contadores
+	nFiles=$( find "$DIR" -mindepth 1 -maxdepth 1 -type f | wc -l)
+	nDirs=$( find "$DIR" -mindepth 1 -maxdepth 1 -type d | wc -l)
 
+	echo "El numero de ficheros y directorios en $DIR es de $nFiles y $nDirs, respectivamente"
 
 else
 	echo "$DIR no es un directorio"

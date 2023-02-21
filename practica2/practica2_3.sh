@@ -1,7 +1,8 @@
 #!/bin/bash
-#816787, Villagrasa Labrador, Alain, T, [1], A
-#848884, Herce Cruz, Daniel, T, [1], A
+#816787, Villagrasa, Alain, T, 1, A
+#848884, Herce, Daniel, T, 1, A
 
+#control del numero de parametros
 if [ "$#" -ne 1 ] ; then
     echo "Sintaxis: practica2_3.sh <nombre_archivo>"
 else

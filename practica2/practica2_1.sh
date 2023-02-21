@@ -1,6 +1,6 @@
 #!/bin/bash
-#816787, Villagrasa Labrador, Alain, T, [1], A
-#848884, Herce Cruz, Daniel, T, [1], A
+#816787, Villagrasa, Alain, T, 1, A
+#848884, Herce, Daniel, T, 1, A
 
 echo -n "Introduzca el nombre del fichero: "
 read nFich # Variable para guardar el nombre del fichero

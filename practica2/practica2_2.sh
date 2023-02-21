@@ -1,9 +1,8 @@
 #!/bin/bash
-#816787, Villagrasa Labrador, Alain, T, [1], A
-#848884, Herce Cruz, Daniel, T, [1], A
+#816787, Villagrasa, Alain, T, 1, A
+#848884, Herce, Daniel, T, 1, A
 
-for fich in "$@"
-do
+for fich in "$@"; do
 	if [ -f "$fich" ] ; then
 		more "$fich"
 	else

@@ -8,7 +8,7 @@ read nFich # Variable para guardar el nombre del fichero
 if [ ! -f "$nFich" ] ; then # Fichero no existe
 	echo "$nFich no existe"
 else # Existe, y mostramos sus permisos
-	echo -n "Los permisos del archivo $nFich son:"
+	echo -n "Los permisos del archivo $nFich son: "
 	
 	# Lectura
 	if [ -r "$nFich" ] ; then
